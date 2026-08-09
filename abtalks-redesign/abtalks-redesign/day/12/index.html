@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Day 12 — ABTalks</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="app-body">
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <a href="/dashboard" class="icon-btn" aria-label="Back to dashboard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 19l-7-7 7-7"/></svg>
+    </a>
+    <div class="text-center" style="flex:1;">
+      <div style="font-weight:600; font-size:14.5px;" class="mono">DAY 12 / 60</div>
+    </div>
+    <span class="badge badge-amber" id="dy-streak">🔥 9</span>
+  </div>
+</div>
+
+<main class="container" style="padding-top: var(--sp-4);">
+
+  <!-- Day progress strip -->
+  <div class="card reveal-up" style="padding: var(--sp-3) var(--sp-4);">
+    <div class="flex items-center justify-between text-sm text-secondary" style="margin-bottom:8px;">
+      <span>This week</span>
+      <span class="mono">Day 12</span>
+    </div>
+    <div class="heatmap" id="week-heatmap" style="grid-template-columns:repeat(7,1fr);"></div>
+  </div>
+
+  <!-- Task -->
+  <div class="card mt-4 reveal-up">
+    <div class="flex items-center justify-between">
+      <span class="badge badge-blue" id="dy-track">Data Science</span>
+      <span class="badge badge-muted" id="dy-time">~75 min</span>
+    </div>
+    <h2 class="mt-3" id="dy-title" style="margin-top:12px;">—</h2>
+    <p class="text-secondary mt-2" style="margin-top:8px;" id="dy-summary">—</p>
+
+    <div class="mt-4" style="margin-top:18px;">
+      <div class="eyebrow">WHAT TO BUILD</div>
+      <ul class="mt-3" id="dy-requirements" style="margin-top:10px; display:flex; flex-direction:column; gap:10px;"></ul>
+    </div>
+  </div>
+
+  <!-- Submission -->
+  <div class="card mt-4 reveal-up" id="submit-card">
+    <h3>Submit today's proof</h3>
+    <p class="text-secondary text-sm mt-2" style="margin-top:6px;">Both links are required — they're what makes your work publicly checkable.</p>
+
+    <form id="submit-form" class="mt-4" style="margin-top:16px; display:flex; flex-direction:column; gap:14px;">
+      <div>
+        <label class="text-sm" style="display:block; margin-bottom:6px; font-weight:500;" for="gh-url">GitHub repository or commit URL</label>
+        <input required type="url" id="gh-url" placeholder="https://github.com/you/project/commit/..."
+          style="width:100%; padding:12px 14px; background:var(--bg-surface-2); border:1px solid var(--border); border-radius:var(--r-sm); color:var(--text-primary);">
+      </div>
+      <div>
+        <label class="text-sm" style="display:block; margin-bottom:6px; font-weight:500;" for="li-url">LinkedIn post URL</label>
+        <input required type="url" id="li-url" placeholder="https://linkedin.com/posts/..."
+          style="width:100%; padding:12px 14px; background:var(--bg-surface-2); border:1px solid var(--border); border-radius:var(--r-sm); color:var(--text-primary);">
+      </div>
+      <div>
+        <label class="text-sm" style="display:block; margin-bottom:6px; font-weight:500;" for="notes">Notes <span class="text-muted">(optional)</span></label>
+        <textarea id="notes" rows="3" placeholder="Anything tricky today, or what you'd do differently?"
+          style="width:100%; padding:12px 14px; background:var(--bg-surface-2); border:1px solid var(--border); border-radius:var(--r-sm); color:var(--text-primary); resize:vertical;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Day 12</button>
+    </form>
+
+    <!-- Success state, hidden until submit -->
+    <div id="submit-success" style="display:none; text-align:center; padding: var(--sp-4) 0;">
+      <div style="font-size:30px;">🎉</div>
+      <h3 class="mt-3" style="margin-top:10px;">Day 12 logged</h3>
+      <p class="text-secondary text-sm mt-2" style="margin-top:6px;">Your streak is now <strong id="success-streak" class="mono">10</strong> days. See you tomorrow.</p>
+      <div class="flex gap-3 mt-4" style="margin-top:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="/dashboard" class="btn btn-secondary btn-sm">Back to dashboard</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<nav class="tabbar">
+  <a href="/dashboard" class="tab-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg>
+    Home
+  </a>
+  <a href="/day/12" class="tab-item active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg>
+    Today
+  </a>
+  <a href="#" class="tab-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"/></svg>
+    Profile
+  </a>
+</nav>
+
+<script src="../../js/mock-data.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/day.js"></script>
+</body>
+</html>

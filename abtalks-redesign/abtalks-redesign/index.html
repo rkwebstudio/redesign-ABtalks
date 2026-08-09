@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ABTalks — Build daily. Post publicly. Get noticed.</title>
+<meta name="description" content="A 60-day coding challenge for Indian college students. Build every day, prove it publicly, and turn consistency into a portfolio recruiters can see.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark">AB</span>
+      ABTalks
+    </a>
+    <div class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#stories">Stories</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/dashboard" class="btn btn-primary btn-sm">Sign in</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <header class="container" style="padding-top: var(--sp-7); padding-bottom: var(--sp-7);">
+    <div class="eyebrow"><span class="dot" style="background:var(--accent-amber)"></span> 60-DAY CHALLENGE · TRACK 04 STARTS MONDAY</div>
+    <h1 class="mt-3">Code every day.<br>Post proof publicly.<br><span style="color:var(--accent-amber)">Get seen.</span></h1>
+    <p class="lede mt-4" style="max-width: 46ch;">
+      One real task a day, for 60 days. Push a commit, share it on LinkedIn, and build a public trail of work that recruiters can actually check.
+    </p>
+    <div class="flex gap-3 mt-5" style="flex-wrap:wrap;">
+      <a href="/dashboard" class="btn btn-primary">Start Day 1 — it's free</a>
+      <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
+    </div>
+    <p class="text-sm text-muted mt-3">No credit card. Pick a track in under a minute.</p>
+
+    <!-- Signature element: streak heatmap -->
+    <div class="card mt-6" style="padding: var(--sp-4);">
+      <div class="flex items-center justify-between" style="margin-bottom:10px;">
+        <span class="text-sm text-secondary">A student's streak, 60 days in</span>
+        <span class="badge badge-amber">🔥 47-day streak</span>
+      </div>
+      <div class="heatmap reveal" id="hero-heatmap"></div>
+    </div>
+  </header>
+
+  <!-- ============ TRUST STATS ============ -->
+  <section class="container" style="padding-block: var(--sp-6);">
+    <div class="card reveal-up" style="display:grid; grid-template-columns: repeat(3,1fr); gap: var(--sp-3); text-align:center;">
+      <div>
+        <div class="mono" style="font-size:22px;font-weight:700;color:var(--accent-amber);" data-countup="10000" data-suffix="+">10,000+</div>
+        <div class="text-sm text-muted mt-2">Students building</div>
+      </div>
+      <div>
+        <div class="mono" style="font-size:22px;font-weight:700;color:var(--accent-blue);" data-countup="500" data-suffix="+">500+</div>
+        <div class="text-sm text-muted mt-2">Projects shipped</div>
+      </div>
+      <div>
+        <div class="mono" style="font-size:22px;font-weight:700;color:var(--accent-green);" data-countup="100" data-suffix="+">100+</div>
+        <div class="text-sm text-muted mt-2">Hiring partners</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how-it-works" class="container" style="padding-block: var(--sp-7);">
+    <div class="eyebrow">THE LOOP</div>
+    <h2 class="mt-2">Three steps, repeated for 60 days</h2>
+    <p class="lede mt-3" style="max-width:52ch;">It's the same loop every day, so it becomes a habit instead of a decision you make each morning.</p>
+
+    <div class="mt-6" style="display:grid; gap: var(--sp-4); grid-template-columns: 1fr;">
+      <div class="card reveal-up flex gap-4">
+        <div class="mono" style="color:var(--accent-amber); font-weight:700; font-size:14px;">STEP_01</div>
+        <div>
+          <h3>Get today's task</h3>
+          <p class="text-secondary text-sm mt-2">Open your dashboard and get one scoped task for your track — AI, Data Science, or Software Engineering. No vague "learn X," a real thing to build.</p>
+        </div>
+      </div>
+      <div class="card reveal-up flex gap-4">
+        <div class="mono" style="color:var(--accent-blue); font-weight:700; font-size:14px;">STEP_02</div>
+        <div>
+          <h3>Build it, then prove it</h3>
+          <p class="text-secondary text-sm mt-2">Push your commit to GitHub and post about it on LinkedIn. Both links go on your submission — that's your proof of work, publicly checkable.</p>
+        </div>
+      </div>
+      <div class="card reveal-up flex gap-4">
+        <div class="mono" style="color:var(--accent-green); font-weight:700; font-size:14px;">STEP_03</div>
+        <div>
+          <h3>Watch your streak grow</h3>
+          <p class="text-secondary text-sm mt-2">Your dashboard tracks the streak, your standing, and your progress through all 60 days — visible to you, and eventually to recruiters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRACKS ============ -->
+  <section id="tracks" class="container" style="padding-block: var(--sp-7);">
+    <div class="eyebrow">PICK ONE</div>
+    <h2 class="mt-2">Choose your track</h2>
+    <p class="lede mt-3" style="max-width:52ch;">Every task is scoped to your track. Switch once, free, in your first week if it's not the right fit.</p>
+
+    <div class="mt-6" style="display:grid; gap: var(--sp-4); grid-template-columns: 1fr;">
+      <div class="card reveal-up">
+        <span class="badge badge-blue">AI</span>
+        <h3 class="mt-3">AI &amp; Applied ML</h3>
+        <p class="text-secondary text-sm mt-2">Prompt engineering, RAG pipelines, agents, and shipping small AI-powered tools end to end.</p>
+      </div>
+      <div class="card reveal-up">
+        <span class="badge badge-green">Data Science</span>
+        <h3 class="mt-3">Data Science</h3>
+        <p class="text-secondary text-sm mt-2">Cleaning real datasets, analysis, visualization, and communicating findings clearly.</p>
+      </div>
+      <div class="card reveal-up">
+        <span class="badge badge-amber">Software Engineering</span>
+        <h3 class="mt-3">Software Engineering</h3>
+        <p class="text-secondary text-sm mt-2">Backend systems, APIs, and the unglamorous engineering fundamentals recruiters actually test for.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="stories" class="container" style="padding-block: var(--sp-7);">
+    <div class="eyebrow">FROM THE COHORT</div>
+    <h2 class="mt-2">What finishing feels like</h2>
+
+    <div class="mt-6" style="display:grid; gap: var(--sp-4); grid-template-columns: 1fr;">
+      <div class="card reveal-up">
+        <p style="font-size:15px;">"I'd start projects and abandon them by day three. Having one small task a day — and having to post it — was the only thing that ever got me to sixty."</p>
+        <div class="flex items-center gap-3 mt-4">
+          <div class="avatar mono">SK</div>
+          <div>
+            <div style="font-weight:600; font-size:14px;">Sanya K.</div>
+            <div class="text-muted text-sm">Software Engineering track</div>
+          </div>
+        </div>
+      </div>
+      <div class="card reveal-up">
+        <p style="font-size:15px;">"Two recruiters messaged me off the back of my streak posts before I'd even finished. Turns out 'I built this every day for two months' is a good answer to 'tell me about yourself.'"</p>
+        <div class="flex items-center gap-3 mt-4">
+          <div class="avatar mono" style="background:linear-gradient(135deg,var(--accent-amber),#FF8A5B); color:#1A1204;">DV</div>
+          <div>
+            <div style="font-weight:600; font-size:14px;">Dev V.</div>
+            <div class="text-muted text-sm">AI track</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="container" style="padding-block: var(--sp-7);">
+    <div class="card reveal-up text-center" style="padding: var(--sp-7) var(--sp-5); background: linear-gradient(180deg, var(--bg-surface), var(--bg-surface-2));">
+      <h2>Day 1 takes ten minutes.</h2>
+      <p class="lede mt-3">Pick a track, get your first task, and start the streak tonight.</p>
+      <a href="/dashboard" class="btn btn-primary mt-5">Start the challenge</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#stories">Stories</a>
+      <a href="/dashboard">Dashboard</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ABTalks. Redesign concept — not affiliated with the original site.</span>
+      <span class="mono">hello@abtalks.example</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  buildHeatmap(document.getElementById('hero-heatmap'), {
+    totalCells: 60,
+    completed: Array.from({length:47}, (_,i)=>i+1).filter(d => d !== 22),
+    missed: [22],
+    shielded: [22],
+    currentDay: 47
+  });
+</script>
+</body>
+</html>
